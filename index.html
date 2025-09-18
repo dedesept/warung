@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ワルンインドネシア</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" />
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <!--ハンバーバーメニューのスクリプト-->
+        <script>
+        // script.js
+            document.addEventListener('DOMContentLoaded', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const nav = document.querySelector('.nav');
+
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    nav.classList.toggle('active');
+
+                    // アクセシビリティ対応
+                    const isOpen = hamburger.classList.contains('active');
+                    hamburger.setAttribute('aria-expanded', isOpen);
+                    nav.setAttribute('aria-hidden', !isOpen);
+                });
+                // メニューの外側をクリックした時の処理
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.nav') && !e.target.closest('.hamburger') && nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', false);
+                        nav.setAttribute('aria-hidden', true);
+                    }
+                });
+            });	
+        </script>
+    </head>
+<body>
+<header>
+    <img src="media/store/logo.png" alt="ワルンインドネシアのロゴ" class="logo">
+    <div class="pc_menu">
+        <nav class="pc_nav" id="menu">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">ワルン情報</a></li>
+                <li><a href="#recomend">おすすめ</a></li>
+                <li><a href="#main_courese">メイン</a></li>
+                <li><a href="#dessert">サイド</a></li>
+            </ul>
+        </nav>    
+    </div>
+</header>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
