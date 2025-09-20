@@ -4,61 +4,81 @@
         <meta charset="UTF-8">
         <title>ワルンインドネシア</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" />
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <!--ハンバーバーメニューのスクリプト-->
-        <script>
-        // script.js
-            document.addEventListener('DOMContentLoaded', () => {
-                const hamburger = document.querySelector('.hamburger');
-                const nav = document.querySelector('.nav');
-
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    nav.classList.toggle('active');
-
-                    // アクセシビリティ対応
-                    const isOpen = hamburger.classList.contains('active');
-                    hamburger.setAttribute('aria-expanded', isOpen);
-                    nav.setAttribute('aria-hidden', !isOpen);
-                });
-                // メニューの外側をクリックした時の処理
-                document.addEventListener('click', (e) => {
-                    if (!e.target.closest('.nav') && !e.target.closest('.hamburger') && nav.classList.contains('active')) {
-                        hamburger.classList.remove('active');
-                        nav.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', false);
-                        nav.setAttribute('aria-hidden', true);
-                    }
-                });
-            });	
-        </script>
+        <link rel="stylesheet" href="style.css">
     </head>
 <body>
 <header>
-    <img src="media/store/logo.png" alt="ワルンインドネシアのロゴ" class="logo">
+    <div class="frame-header">
+        <img src="media/store/logo.png" alt="ワルンインドネシアのロゴ" class="logo">
+    </div>
     <div class="pc_menu">
-        <nav class="pc_nav" id="menu">
-            <ul>
+        <button id="hamburger"><i class="fa-solid fa-burger"></i></button>
+            <ul class="list1">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="about.html">ワルン情報</a></li>
                 <li><a href="#recomend">おすすめ</a></li>
-                <li><a href="#main_courese">メイン</a></li>
+                <li><a href="#main_course">メイン</a></li>
                 <li><a href="#dessert">サイド</a></li>
             </ul>
-        </nav>    
+        
     </div>
 </header>
+<div class="slide-show-container">
+    <img class="slide-show-item" src="media/meal/hero.jpg" alt="バクソ　マラン">
+    <img class="slide-show-item" src="media/extra/front-store06v2.jpg" alt="ワルンの外観">
+    <img class="slide-show-item" src="media/extra/iga-bakar.jpg" alt="イガバカール">
+    <img class="slide-show-item" src="media/extra/front-store07.jpg" alt="ワルンの外観2">
+</div>
+<div class="sns">
+    <a href="phone:0298967008" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone fa-2x faa-tada animated"></i></a>
+    <a href="https://youtube.com/@warungindonesia1212" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-2x faa-tada animated"></i></a>
+    <a href="https://www.facebook.com/WarungIndonesia1212" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-2x faa-tada animated"></i></a>
+    <a href="https://www.instagram.com/warungindonesia1212/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-2x faa-tada animated"></i></a>
 
-
-
-
-
-
-
-
+    <a href="https://tikTok.com/@warungindonesia1212" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok fa-2x faa-tada animated"></i></a>
+</div>
+<div id="recomend">
+    <h1 class="section-title">おすすめ<div class="rectangle"></div></h1>
+    <a href=" "><img src="media/meal/ayam-geprek.jpg" alt="アヤム　グプレック" class="recomend-image"></a>
+    <a href=" "><img src="media/meal/sate-kambing.jpg" alt="サテ　カンビン" class="recomend-image"></a>
+    <a href=" "><img src="media/meal/cireng.jpg" alt="チレン" class="recomend-image"></a>
+    <a href=" "><img src="media/meal/empek.jpg" alt="エンペック" class="recomend-image"></a>    
+</div>
+<div id="main_course">
+    <section class="main-course-group">
+        <a href=" "><img src="media/meal/lunchmenu1.jpg" alt="ランチメニュー" class="menu-image"></a>
+        <a href=" "><img src="media/meal/nasgor.png" alt="ナシゴレン" class="menu-image"></a>
+        <a href=" "><img src="media/meal/nasi-kebuli.png" alt="ナシ　クブリ" class="menu-image"></a>
+        <a href=" "><img src="media/meal/gulai-kambing.jpg" alt="グライ　カンビン" class="menu-image"></a>
+        <a href=" "><img src="media/meal/mie-ayam.jpg" alt="ミー　アヤム" class="menu-image"></a>
+        <a href=" "><img src="media/meal/gulai-kikil.jpg" alt="グライ　キキル" class="menu-image"></a>
+        <a href=" "><img src="media/meal/migoreng.jpg" alt="ミーゴレン" class="menu-image"></a>
+    </section>
+</div>
+<div id="dessert">
+    <section class="dessert-group">
+        <h2 class="section-title">サイドメニュー・ドリンク<div class="rectangle"></div></h2>
+        <a href=" "><img src="media/meal/batagor.jpg" alt="バタゴール" class="dessert-image"></a>
+        <a href=" "><img src="media/meal/somay.jpg" alt="ソマイ" class="dessert-image"></a>
+        <a href=" "><img src="media/meal/dawet.jpg" alt="ダウェット" class="dessert-image"></a>
+        <a href=" "><img src="media/meal/mendoan.jpg" alt="メンドアン" class="dessert-image"></a>
+    </section>
+</div>
+<div class="access">
+    <section class="access-info">
+        <img src="media/store/staff001.jpg" alt="スタッフの写真" class="staff-image">
+        <p class="access-text">
+            待ってくださるその時間も、
+ワルン インドネシアにとってはワクワクの時間です。あなたのご来店を心から楽しみにお待ちしています！
+        </p>
+    </section>
+    <a href=" "><p class="access-link">アクセスはこちら！</p></a>
+</div>
+<footer>
+    <img src="media/store/logo.png" alt="ワルンインドネシアのロゴ" class="footer-logo">
+    <p class="footer-text">© 2025 Dede Septiyawan</p>
+    <script src="script.js"></script>
 </body>
-
 </html>
