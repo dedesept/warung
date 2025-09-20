@@ -242,12 +242,12 @@ body {
     color: var(--accent-color);
 }
 
-/*recomend section styles*/
-#recomend {
+/*recommend section styles*/
+#recommend {
     max-width: 480px;
     margin: 0 auto;
-    flex-wrap: wrap;
     gap: 10px;
+    padding-bottom: 25px;
     background-color: var(--main-color);
     padding-bottom: 25px;
 }
@@ -266,12 +266,17 @@ body {
     border-bottom: 4px solid var(--accent-color);
 }
 
-#recomend img {
-    flex: 1 1 calc(50% - 0);
-    max-width: calc(50% - 2px);
+.recommend-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 25px;
+}
+
+.recommend-group img {
+    width: 100%;
     height: auto;
     object-fit: cover;
-    padding-bottom: 10px;
 }
 
 /*main course section styles*/
