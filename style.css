@@ -111,7 +111,6 @@ body {
 /* Header styles */
 
 .frame-header {
-    max-width: 480px;
     width: 100%;
     max-height: 44px;
     height: 100%;
@@ -162,6 +161,7 @@ body {
     background: rgba(255, 204, 1, 0.9);
     transition: all 0.8s ease;
     border-radius: 10px;
+    z-index: 1001;
 }
 
 .list1 li {
@@ -237,7 +237,7 @@ body {
 
 /*sns icon styles*/
 .sns {
-    max-width: 480px;
+    max-width: 100%;
     max-height: 50px;
     margin: 10px auto;
     background-color: var(--background-color);
@@ -255,7 +255,7 @@ body {
 
 /*recommend section styles*/
 #recommend {
-    max-width: 480px;
+    max-width: 100%;
     margin: 0 auto;
     gap: 10px;
     padding-bottom: 25px;
@@ -292,7 +292,7 @@ body {
 
 /*main course section styles*/
 #main-course {
-    max-width: 480px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     background-color: #F0F4F7;
@@ -323,7 +323,7 @@ body {
 
 /*dessert section styles*/
 #dessert {
-    max-width: 480px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     background-color: var(--main-color);
@@ -344,7 +344,7 @@ body {
 
 /*access section styles*/
 .access {
-    max-width: 480px;
+    max-width: 100%;
     max-height: 460px;
     margin: 0 auto;
     background-color: var(--background-color);
@@ -419,7 +419,30 @@ footer p {
     font-size: 14px;
 }
 
+.fa-arrow-up {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: var(--text-color);
+    background: rgba(255, 204, 1, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1001;
+    cursor: pointer;
+}
 
+
+.fa-arrow-up:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
 
 
 /* For tablets and up */

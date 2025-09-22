@@ -22,3 +22,10 @@ function changeImage() {
 }
 
 setInterval(changeImage, 4000);
+
+// Smooth scroll to top functionality
+const topBtn = document.querySelector('.fa-arrow-up');
+
+topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: "smooth"});
+});
